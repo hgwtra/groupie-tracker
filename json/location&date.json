@@ -1,0 +1,26 @@
+{
+    "id": 1,
+    "locations": [
+        "north_carolina-usa",
+        "georgia-usa",
+        "los_angeles-usa",
+        "saitama-japan",
+        "osaka-japan",
+        "nagoya-japan",
+        "penrose-new_zealand",
+        "dunedin-new_zealand"
+    ],
+    "dates": {
+        "id": 1,
+        "dates": [
+            "*23-08-2019",
+            "*22-08-2019",
+            "*20-08-2019",
+            "*26-01-2020",
+            "*28-01-2020",
+            "*30-01-2019",
+            "*07-02-2020",
+            "*10-02-2020"
+        ]
+    }
+}

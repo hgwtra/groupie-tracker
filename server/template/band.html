@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groupie Tracker</title>
+    <link rel="stylesheet" href="/static/artist.css">
+    
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <!-- LOGO -->
+            <div class="logo">groupie-tracker<br>by ashley and gin</div>
+            <!-- BACK BUTTON -->
+            <a href="/"><input type="button" class="button" value="Back"></a>
+        </nav>       
+    </header>
+
+    <main>
+        <div class="flex-container">
+            <div class="column">
+                <img class="content" src="{{.Image}}">
+                <h2 class="content">Name: </h2><h3>{{.Name}}</h3><br><br>
+                <h2 class="content">Members: </h2>{{range .Members}}<h3>{{.}} </h3>{{end}}<br><br>
+                <h2 class="content">Creation Date: </h2><h3> {{.CreationDate}} </h3><br><br>
+                <h2 class="content">First Album: </h2><h3>{{.FirstAlbum}}</h3><br><br>
+            </div>
+
+            <div class="column">
+                <h2 class="content">Locations: </h2>{{range .Locations}}<h3>{{.}}</h3>{{end}}<br><br>
+                <h2 class="content">Last Concerts: </h2>{{range .ConcertDates}}<h3>{{.}}</h3>{{end}}<br><br>
+                <h2 class="content">Relations: </h2>
+                <div>
+                    {{range .Relations}}
+                <div class="location">{{.Location}}</div>
+                <div class="dates">
+                    {{range .Dates}}
+                    <h3>{{.}}</h3>
+                    {{end}}
+                </div>
+                {{end}}
+                </div><br><br>
+            </div>
+    </main>
+    
+</body>
+</html>

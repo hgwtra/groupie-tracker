@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1">
+        <title>groupie-tracker</title>
+        <link href="static/style.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body>
+      <header>
+        <nav class="navbar">
+          <!-- LOGO -->
+          <div class="logo">groupie-tracker<br>by ashley and gin</div>
+        </nav>
+      </header>
+      <main>
+      <section class="flex-container">
+      {{range .}}
+        <div class="card">
+          <figure>
+              <a id="img" href="http://localhost:8080/artists?name={{.Name}}">
+              <img src={{.Image}} alt="band logo">
+              </a>
+              <figcaption>{{.Name}}</figcaption>
+          </figure>
+          <details>
+              <summary>Last Concert Location</summary>
+              {{range .RecentConcerts}}
+              <div>{{.}}</div>
+              {{end}}
+          </details>
+        </div>
+      {{end}}
+      </section>
+      </main>
+    </body>
+    <footer>
+      <div role="contentinfo">All rights reserved © 2022</div>
+    </footer>
+</html>

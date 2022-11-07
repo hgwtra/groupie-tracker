@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>groupie-tracker</title>
+    <link rel="stylesheet" href="/static/err.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <!-- LOGO -->
+            <div class="logo">groupie-tracker<br>by ashley and gin</div>
+            <!-- BACK BUTTON -->
+            <a href="/"><input type="button" class="button" value="Back"></a>
+        </nav>       
+    </header>
+    <main>
+
+        <figure>
+            <div class="sad-mac"></div>
+            <figcaption>
+                <span class="sr-text">Error</span>
+                <span class="e"></span>
+                <span class="r"></span>
+                <span class="r"></span>
+                <span class="o"></span>
+                <span class="r"></span>
+                <div class="Num">
+                    #{{ .Num}}
+                    <br>
+                    {{ .Text}}
+                </div>
+            </figcaption>
+        </figure>
+    </main>
+</body>
+</html>
